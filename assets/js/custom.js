@@ -76,10 +76,10 @@ function getResult(param){
 						      		<img class="card-img-top" src="'+item.links.mission_patch_small+'" alt="Card image cap">\
 						      	</div>\
 						      	<div class="row"><div class="col-12"><h5 class="card-title">'+item.mission_name+' #'+item.flight_number+'</h5></div></div>\
-							    <div class="row"><div class="col-6">Mission Ids: </div><div class="col-6">'+item.mission_id+'</div></div>\
-							    <div class="row"><div class="col-6">Lunch Year: </div><div class="col-6">'+item.launch_year+'</div></div>\
-							    <div class="row"><div class="col-6">Successful Lunch:</div><div class="col-6">'+item.launch_success+'</div></div>\
-							    <div class="row"><div class="col-6">Successful Landing:</div><div class="col-6"> '+item.rocket.first_stage.cores[0].land_success+'</div></div>\
+							    <div class="row"><div class="col-6"><b>Mission Ids:</b> </div><div class="col-6">'+item.mission_id+'</div></div>\
+							    <div class="row"><div class="col-6"><b>Lunch Year:</b> </div><div class="col-6">'+item.launch_year+'</div></div>\
+							    <div class="row"><div class="col-6"><b>Successful Lunch:</b></div><div class="col-6">'+item.launch_success+'</div></div>\
+							    <div class="row"><div class="col-6"><b>Successful Landing:</b></div><div class="col-6"> '+item.rocket.first_stage.cores[0].land_success+'</div></div>\
 						    </div>\
 						</div>\
 				    </div>';

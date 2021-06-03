@@ -143,8 +143,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	      	</div>
 	    </div>
 	</div>
-	<footer class="footer text-center">
-                Devloped By:Harapriya Mahanta
+	<footer class="footer">
+		<div class="text-center">
+        	<b>Devloped By:</b>Harapriya Mahanta
+        </div>
     </footer>
 </div>
 
