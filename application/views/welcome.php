@@ -158,8 +158,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 
 <script  src="<?php echo base_url().'assets/js/custom.js'; ?>"></script>
-<script type="text/javascript">
-	getResult();
-
-</script>
 </html>

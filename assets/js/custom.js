@@ -1,3 +1,61 @@
+$(document).ready(function(){
+	getResult();
+});
+
+$('a').on('click',function(){
+	var type = $(this).data('type');
+	var val = $(this).data('id');
+	if(type=='launch_year'){
+		$("a[data-type='launch_year']").removeClass('active');
+		$(this).addClass('active');
+		var param = '&launch_year='+val;
+		$("a[data-type='launch_success']").each(function(obj){
+			if($(this).hasClass("active")){
+			param += '&launch_success='+$(this).data('id');
+			}
+		});
+		$("a[data-type='land_success']").each(function(obj){
+			if($(this).hasClass("active")){
+			param += '&land_success='+$(this).data('id');
+			}
+		});
+	}
+	if(type=='launch_success'){
+		$("a[data-type='launch_success']").removeClass('active');
+		$(this).addClass('active');
+		var param = '&launch_success='+val;
+		$("a[data-type='launch_year']").each(function(obj){
+			if($(this).hasClass("active")){
+			param += '&launch_year='+$(this).data('id');
+			}
+		});
+		$("a[data-type='land_success']").each(function(obj){
+			if($(this).hasClass("active")){
+			param += '&land_success='+$(this).data('id');
+			}
+		});
+	}
+	if(type=='land_success'){
+		$("a[data-type='land_success']").removeClass('active');
+		$(this).addClass('active');
+		var param = '&land_success='+val;
+		$("a[data-type='launch_success']").each(function(obj){
+			if($(this).hasClass("active")){
+			param += '&launch_success='+$(this).data('id');
+			}
+		});
+		$("a[data-type='launch_year']").each(function(obj){
+			if($(this).hasClass("active")){
+			param += '&launch_year='+$(this).data('id');
+			}
+		});
+	}
+	getResult(param);
+})
+
+
+
+
 function getResult(param){
 
 	$.ajax({
@@ -33,57 +91,5 @@ function getResult(param){
         }
     });
 }
-
-
-$('a').on('click',function(){
-		var type = $(this).data('type');
-		var val = $(this).data('id');
-		if(type=='launch_year'){
-			$("a[data-type='launch_year']").removeClass('active');
-			$(this).addClass('active');
-			var param = '&launch_year='+val;
-			$("a[data-type='launch_success']").each(function(obj){
-				if($(this).hasClass("active")){
-				param += '&launch_success='+$(this).data('id');
-				}
-			});
-			$("a[data-type='land_success']").each(function(obj){
-				if($(this).hasClass("active")){
-				param += '&land_success='+$(this).data('id');
-				}
-			});
-		}
-		if(type=='launch_success'){
-			$("a[data-type='launch_success']").removeClass('active');
-			$(this).addClass('active');
-			var param = '&launch_success='+val;
-			$("a[data-type='launch_year']").each(function(obj){
-				if($(this).hasClass("active")){
-				param += '&launch_year='+$(this).data('id');
-				}
-			});
-			$("a[data-type='land_success']").each(function(obj){
-				if($(this).hasClass("active")){
-				param += '&land_success='+$(this).data('id');
-				}
-			});
-		}
-		if(type=='land_success'){
-			$("a[data-type='land_success']").removeClass('active');
-			$(this).addClass('active');
-			var param = '&land_success='+val;
-			$("a[data-type='launch_success']").each(function(obj){
-				if($(this).hasClass("active")){
-				param += '&launch_success='+$(this).data('id');
-				}
-			});
-			$("a[data-type='launch_year']").each(function(obj){
-				if($(this).hasClass("active")){
-				param += '&launch_year='+$(this).data('id');
-				}
-			});
-		}
-		getResult(param);
-	})
 
 
